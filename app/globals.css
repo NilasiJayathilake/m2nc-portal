@@ -1,26 +1,29 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Manrope, system-ui, sans-serif;
+}
+
+/* ===== Theme (from your design system image) ===== */
+:root {
+  --background: #ECEEEF;
+  --card: #FFFFFF;
+
+  --primary: #007B85;
+  --secondary: #5D7D81;
+  --tertiary: #A15F2E;
+  --neutral: #737878;
+
+  --text: #1F1F1F;
+}
+
+@layer base {
+  * {
+    border-color: var(--neutral);
+  }
+
+  body {
+    background: var(--background);
+    color: var(--text);
+  }
 }
